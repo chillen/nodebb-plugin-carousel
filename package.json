@@ -1,6 +1,6 @@
 {
   "name": "nodebb-plugin-carousel",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "NodeBB plugin for beautiful responsive carousel image viewer",
   "main": "index.js",
   "scripts": {
@@ -8,17 +8,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mani95lisa/nodebb-plugin-carousel"
+    "url": "https://github.com/connorhillen/nodebb-plugin-carousel"
   },
   "keywords": [
     "nodebb",
     "plugin",
     "carousel"
   ],
-  "author": "Mani Wang <mani95lisa@gmail.com> (https://github.com/mani95lisa)",
+  "author": "Connor Hillen",
   "license": "WTFPL",
   "bugs": {
-    "url": "https://github.com/mani95lisa/nodebb-plugin-carousel/issues"
+    "url": "https://github.com/connorhillen/nodebb-plugin-carousel/issues"
   },
-  "homepage": "https://github.com/mani95lisa/nodebb-plugin-carousel"
+  "homepage": "https://github.com/connorhillen/nodebb-plugin-carousel"
 }

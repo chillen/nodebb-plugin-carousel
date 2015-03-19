@@ -2,10 +2,11 @@
     "id": "nodebb-plugin-carousel",
     "name": "NodeBB Plugin Carousel",
     "description": "NodeBB plugin for beautiful responsive carousel image viewer",
-    "url": "https://github.com/mani95lisa/nodebb-plugin-carousel",
+    "url": "https://github.com/connorhillen/nodebb-plugin-carousel",
     "library": "./index.js",
     "hooks": [
-        { "hook": "filter:post.parse", "method": "parse", "callbacked": true, "priority": 6 }
+        { "hook": "filter:parse.post", "method": "parse", "callbacked": true, "priority": 6 },
+        { "hook": "filter:parse.raw", "method": "parseRaw", "callbacked": true, "priority": 6 }
     ],
     "css": [
         "static/owl.carousel.css",
