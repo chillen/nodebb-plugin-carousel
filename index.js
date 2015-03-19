@@ -23,8 +23,6 @@
         , str     = "<div class='owl-carousel owl-theme carousel' " + (config? "config={"+config+"}" : "") + ">"
         ;
 
-        console.log(config);
-
         // Items should be incoming as a JSON object
         while(items) {
           try {
@@ -35,7 +33,6 @@
             var json = items[1].replace(/&quot;/g, "\"");
             json = json.replace(/<a href=[\s\S]*?>(.*?)<\/a>/g, "$1");
 
-            console.log(json);
             json = JSON.parse(json);
 
             if (json.href) {
@@ -66,6 +63,7 @@
     }
 
     Carousel.parse = function(data, callback) {
+        console.log("Parsing: ", data);
         if (!data || !data.postData || !data.postData.content) {
           return callback(null, data);
         }
@@ -77,6 +75,12 @@
 
         callback(null, data);
     };
+
+    Carousel.parseRaw = function(data, callback) {
+      Carousel.parse( { "postData": { "content": data } }, function (err, data) {
+        callback(err, data.postData.content);
+      } );
+    }
 
     module.exports = Carousel;
 }(module));

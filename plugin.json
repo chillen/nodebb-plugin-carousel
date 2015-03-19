@@ -5,7 +5,8 @@
     "url": "https://github.com/connorhillen/nodebb-plugin-carousel",
     "library": "./index.js",
     "hooks": [
-        { "hook": "filter:parse.post", "method": "parse", "callbacked": true, "priority": 6 }
+        { "hook": "filter:parse.post", "method": "parse", "callbacked": true, "priority": 6 },
+        { "hook": "filter:parse.raw", "method": "parseRaw", "callbacked": true, "priority": 6 }
     ],
     "css": [
         "static/owl.carousel.css",
